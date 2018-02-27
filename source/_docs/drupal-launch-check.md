@@ -4,7 +4,7 @@ description: Detailed information on Launch Check, Drupal Performance and Config
 tags: [status]
 categories: [drupal7]
 ---
-Pantheon provides static site analysis as a service for Drupal 7 sites to make best practice recommendations on site configurations. These reports are found in the Site Dashboard under the **Status** tab and are accessible by site team members.
+Pantheon provides static site analysis as a service for Drupal sites to make best practice recommendations on site configurations. These reports are found in the Site Dashboard under the **Status** tab and are accessible by site team members.
 
 ![status tab on live environment](/source/docs/assets/images/dashboard/status-tab.png)
 
@@ -54,8 +54,6 @@ You can also execute a full report in HTML format.
 ```bash
 terminus remote:drush <site>.<env> -- aa --skip=insights --html --bootstrap --detail --vendor=pantheon > report.html
 ```
-#### Is Launch Check available for Drupal 8 sites?
-Launch Check for Drupal 8 is currently in development and will be available at a later date.
 
 #### Are there plans to support Drupal 6 sites?
 At this time, there are no plans to support Drupal 6 with this tool.

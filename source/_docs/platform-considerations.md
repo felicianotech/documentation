@@ -51,7 +51,9 @@ Domain masking allows you to serve two entirely different and separate sites ove
 * Main Site: `https://www.example-site.com/`
 * Blog: `https://www.example-site.com/blog/`
 
-In and of itself, Pantheon does not support this kind of setup. Each site on the platform must have its own unique domain. However, this configuration can be achieved using an external service such as CloudFront, StackPath, Fastly, etc.
+Pantheon does not provide any mechanism to implement domain masking. You may be able to setup this using a third party service but Pantheon cannot assist with the configuration or support if you implement domain masking.
+
+In cases of redirection issues on sites with domain masking implemented, Pantheon cannot assist in debugging unless the domain masking is disabled.
 
 ### Additional Databases
 While you are able to import an additional database to an environment, only the Pantheon database will be persevered when the application container is updated. This means you can use an additional database for running migration scripts, but should not rely on it nor write any new data to it.
@@ -90,7 +92,10 @@ Pantheon's file serving infrastructure is not optimized to store and deliver ver
 
 Pantheon cannot be used to host files over 256MB, no matter how the file is uploaded.
 
-If you are distributing large binaries or hosting big media files, we recommend using a CDN like Amazon S3 as a cost-effective file serving solution. Modules such as [Amazon S3 CORS Upload](https://drupal.org/project/amazons3_cors) allow uploads directly to S3 from your Drupal site without using Pantheon as an intermediary.
+If you are distributing large binaries or hosting big media files, we recommend using a CDN like Amazon S3 as a cost-effective file serving solution that allows uploads directly to S3 from your site without using Pantheon as an intermediary.
+
+ - Drupal sites can use a module such as [Amazon S3 CORS Upload](https://drupal.org/project/amazons3_cors){.external}
+ - WordPress sites can use plugins such as [S3 Uploads](https://github.com/humanmade/S3-Uploads){.external} or [WP Offload S3](https://deliciousbrains.com/wp-offload-s3/){.external}
 
 ## Large Code Repository
 

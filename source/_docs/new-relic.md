@@ -39,7 +39,7 @@ New Relic's Dashboard starts with a high-level breakdown of application performa
 2. Database Queries (MySQL or Redis)
 3. External Requests (e.g. calls to third pary APIs)
 
-Depending on which area you need to optimize, you will dig in to different areas of data. For instance, a lot of [time spent in the databse](/docs/debug-mysql-new-relic/) could be the result of slow queries, or an elevated volume of queries overall.
+Depending on which area you need to optimize, you will dig in to different areas of data. For instance, a lot of [time spent in the database](/docs/debug-mysql-new-relic/) could be the result of slow queries, or an elevated volume of queries overall.
 
 For more information on using New Relic's features, we encourage you to read  the [New Relic APM](https://docs.newrelic.com/docs/apm){.external} docs, especially the pages on [transactions](https://docs.newrelic.com/docs/apm/transactions){.external} and [slow query details](https://docs.newrelic.com/docs/apm/applications-menu/monitoring/viewing-slow-query-details){.external}. You can find more information on using New Relic to investigate specific areas of performance below:
 
@@ -186,7 +186,7 @@ At the bottom of any page, click **Permalink**. This will preserve the current t
 
 ### How much is New Relic APM Pro?
 
-Pantheon provides New Relic APM Pro for all sites at no cost. Purchase additional services or upgrade your New Relic account by reaching out to [pantheon@newrelic.com](mailto:pantheon@newrelic.com){.external}.
+Pantheon provides New Relic APM Pro for all sites at no cost. Purchase additional services or upgrade your New Relic account by reaching out to [sales@newrelic.com](mailto:sales@newrelic.com){.external}.
 
 ### Will turning on New Relic APM Pro slow my site down?
 

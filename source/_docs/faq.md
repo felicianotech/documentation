@@ -24,7 +24,7 @@ Pantheon is free for developers. Our live site plans currently start as low as $
 
 
 ### Where are the Pantheon servers located?
-Our data center is in the United States, but Pantheon's [Global CDN](/docs/global-cdn/) serves content from 30+ POPs (points of presence) distributed around the world. We also have plans to add data centers in Europe, which would speed up authenticated traffic for end-users there, but we don't have an ETA for that expansion.
+Our data center is in the United States, but Pantheon's [Global CDN](/docs/global-cdn/) serves content from 40+ POPs (points of presence) distributed around the world. We also have plans to add data centers in Europe, which would speed up authenticated traffic for end-users there, but we don't have an ETA for that expansion.
 
 ### Can I run other applications on Pantheon?
 
@@ -52,12 +52,12 @@ To learn more, see [Using the Pantheon Workflow](/docs/pantheon-workflow/).
 
 ## Developing Sites
 
-#### Does Pantheon offer professional services?
-No. Pantheon provides an infrastructure for professional web developers at agencies and development shops everywhere. We do not build sites or offer professional services. There is a rich ecosystem of Pantheon partners who provide Drupal and WordPress services. See the [Pantheon Agency Finder](https://pantheon.io/agencies/agency-finder) for more information.
+### Does Pantheon offer professional services?
+No, however over 2000 design and development agencies partner with Pantheon to build and host their clients’ sites on our website management platform. [Get a personalized quote](https://pantheon.io/agencies/agency-match){.external} from Pantheon’s network of top agencies.
 
 ### Can Pantheon run sites on highly available server clusters?
 
-Yes. Pantheon sites run on a highly available clustered infrastructure. The primary upstream provider is Rackspace.
+Yes. Pantheon sites run on a highly available clustered infrastructure.
 
 ### Can I use my own Git repository (e.g GitHub)?
 
@@ -102,7 +102,7 @@ No. We do not have plans to add this feature. However, it is possible to run a s
 
 ### How do I increase the maximum execution time limit for a PHP script?
 
-The upper time limit for PHP processing on the platform is 120 seconds. This is outlined in the [Timeouts](/docs/timeouts/) documentation and it cannot be increased.  If a script is processing a large amount of data, for example, we recommend that the process be done in smaller batches that can execute sequentially to ensure success. 
+The upper time limit for PHP processing on the platform is 120 seconds. This is outlined in the [Timeouts](/docs/timeouts/) documentation and it cannot be increased.  If a script is processing a large amount of data, for example, we recommend that the process be done in smaller batches that can execute sequentially to ensure success.
 
 ### Can I Host a Multilingual Site?
 
@@ -133,6 +133,10 @@ Warning: session_start(): user session functions not defined
 ```
 
 You'll need the plugin. [More information on sessions](/docs/wordpress-sessions/).
+
+### Can I install a new Panopoly distribution?
+Yes. See [Public Distributions](/docs/start-state/#public-distributions) for details.
+
 
 ## Caching and Performance
 

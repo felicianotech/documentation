@@ -141,7 +141,7 @@ All plans except for a Personal plan can use Redis. Redis is available to Sandbo
       You can install and enable the module from the command line using [Terminus](/docs/terminus):
 
           terminus remote:drush <site>.<env> -- en redis -y
-  3. Edit `sites/default/settings.php` to add the Redis cache configuration. These are the **mandatory**, required Redis configurations for every site.
+  3. Edit `sites/default/settings.php` to add the Redis cache configuration. These are the **mandatory**, required Redis configurations for every site.
 
       ```php
       // Configure Redis
@@ -182,7 +182,7 @@ All plans except for a Personal plan can use Redis. Redis is available to Sandbo
       - `redis_client_host`
       - `redis_client_port`
       - `redis_client_password`
-  4. Edit `sites/default/settings.php` to add the Redis cache configuration. These are the **mandatory**, required Redis configurations for every site.
+  4. Edit `sites/default/settings.php` to add the Redis cache configuration. These are the **mandatory**, required Redis configurations for every site.
 
       ```php
       // All Pantheon Environments.
@@ -365,6 +365,16 @@ You skipped a step; `settings.php` must include the cache\_backport files. Add t
 ```php
 $conf['cache_inc'] = 'sites/all/modules/cache_backport/cache.inc';
 ```
+
+### You have requested a non-existent service
+The following error occurs when modifying configurations for the [Redis](https://www.drupal.org/project/redis){.external} module before it has been enabled:
+
+```php
+Symfony\Component\DependencyInjection\Exception\ServiceNotFoundException:
+You have requested a non-existent service "cache.backend.redis".
+```
+
+Install and enable the module to resolve.
 
 ## Frequently Asked Questions
 ### What happens when Redis reaches maxmemory?

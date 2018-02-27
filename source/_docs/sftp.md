@@ -60,27 +60,15 @@ There is also a one-click option so you can connect with a GUI client. The main 
 
 Get the instructions for other [SFTP clients](/docs/sftp#sftp-clients).
 
-
-## Authenticating
-
-### SSH Keys
-To take full advantage of Pantheon, you should load your public SSH key into your account. SSH keys are a best practice for authentication, allowing you more security than a simple password. You will only need to do this once, no matter how many sites you work on. For more details, see [Generate and Add SSH Keys](/docs/ssh-keys/).
-
-### Dashboard Credentials
-Alternatively, you may use your Pantheon Dashboard password when prompted.  
-
-<div class="alert alert-info">
-<h4 class="info">Note</h4>
-<p markdown="1">If you login via social login (Connect with Google) or Single-Sign On (SSO) and you'd like to authenticate using a password, logout and visit [https://dashboard.pantheon.io/reset-password](https://dashboard.pantheon.io/reset-password) to add a password to your account.</p>
-</div>
-
-Larger agencies with multiple developers using password authentication who login frequently may see access issues across the organization. To avoid potential authentication failures, we strongly recommend using SSH keys. For details, see <a href="/docs/organization-faq#why-do-login-attempts-fail-for-all-users-across-my-organization-simultaneously?" data-proofer-ignore>Pantheon Organizations FAQs</a>.
+{% include("content/auth.html")%}
 
 ## Committing SFTP Changes
 
 Even though you are unable to use Git to push remotely with SFTP mode enabled, you still need to commit your changes to save them, or push them to Test/Live. **Commit early and commit often**. Large sets of code changes taking longer than two minutes to commit may result in failure due to timeouts. In those cases, temporarily remove some of your code changes (new modules or plugins), then try again.
 
-After you have made a change to your code, you will see a message that appears below the comment box to let you know you have some changes that are not in your repository. Clicking the notification message expands the listing of the pending changes.
+After you have made a change to your code, you will see a message on the Dashboard that appears below the comment box to let you know you have uncommitted changes that are not yet in your repository. Clicking the notification message expands the listing of the pending changes.
+
+![Uncommitted changes](/source/docs/assets/images/dashboard/pantheon-dashboard-uncommitted-changes.png)
 
 Write a helpful commit message to go with your changes. This will make maintaining your code a saner process, and make it easier for any other developers who pull your changes down to understand what you've done.
 

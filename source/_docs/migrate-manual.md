@@ -98,61 +98,7 @@ Your **code** is all custom and contributed modules or plugins, themes, and libr
       </a>
     </div>
     <div id="unique-anchor" class="collapse" markdown="1" style="padding:10px;">
-      The codebase is comprised of the following files and directories:
-      <!-- Nav tabs -->
-      <ul class="nav nav-tabs" role="tablist">
-        <!-- Active tab -->
-        <li id="wp-code-id" role="presentation" class="active"><a href="#wp-code" aria-controls="wp-code" role="tab" data-toggle="tab">WordPress</a></li>
-        <!-- 2nd Tab Nav -->
-        <li id="drops-code-id" role="presentation"><a href="#drops-code" aria-controls="drops-code" role="tab" data-toggle="tab">Drupal</a></li>
-      </ul>
-      <!-- Tab panes -->
-      <div class="tab-content">
-        <!-- Active pane content -->
-        <div role="tabpanel" class="tab-pane active" id="wp-code" markdown="1">
-          ```nohighlight
-          ├── index.php
-          ├── wp-activate.php
-          ├── wp-config.php
-          ├── wp-comments-post.php
-          ├── wp-blog-header.php
-          ├── wp-admin
-          ├── wp-cron.php
-          ├── wp-load.php
-          ├── wp-links-opml.php
-          ├── wp-includes
-          ├── xmlrpc.php
-          ├── wp-trackback.php
-          ├── wp-signup.php
-          ├── wp-settings.php
-          ├── wp-mail.php
-          ├── wp-login.php
-          ├── wp-content
-              ├── index.php
-              ├── mu-plugins
-              ├── themes
-              ├── plugins
-          ```
-       </div>
-        <!-- 2nd pane content -->
-        <div role="tabpanel" class="tab-pane" id="drops-code" markdown="1">
-          ```nohighlight
-          ├── includes
-          ├── index.php
-          ├── misc
-          ├── modules
-          ├── profiles
-          ├── scripts
-          ├── sites
-              └── all
-                 ├── modules
-                 └── themes
-              └── default
-                 └── settings.php
-          └── themes
-          ```
-        </div>
-      </div>
+      {% include("content/code.html")%}
     </div>
   </div>
   <div class="alert alert-info">
@@ -447,6 +393,30 @@ You can use the Pantheon Dashboard, SFTP, or Rsync to upload your site's files.
 You should now have all three of the major components of your site imported into Pantheon. Clear your caches on the the Pantheon Dashboard, and you are good to go! Once everything looks good, click **I've Successfully Migrated Manually**:
 
 ![Finish Manual Migration](/source/docs/assets/images/successfully-migrated.png)
+## Troubleshooting
+
+### fatal: Not possible to fast-forward, aborting.
+This error may occur when trying to merge Pantheon's codebase into your existing repository as described earlier on this page in (step 5 of [importing your code from the commandline](#from-the-command-line-with-git):
+
+```
+Not possible to fast-forward, aborting.
+```
+
+Depending on your Git version, you may see the following error instead: 
+
+```
+fatal: refusing to merge unrelated histories
+```
+
+If you see this, it is possible your local Git configuration is disallowing non-fastforward merges:
+
+```
+[pull]
+rebase = TRUE
+ff = only
+```
+
+In this case, you will want to remove `ff = only` from your `.gitconfig` file and try the merge command again. 
 
 ## See Also
 Check our standard migration procedure for related <a href="/docs/migrate#frequently-asked-questions-faqs" data-proofer-ignore>Frequently Asked Questions</a> and [Troubleshooting](/docs/migrate#troubleshooting) tips.
